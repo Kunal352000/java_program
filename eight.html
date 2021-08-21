@@ -1,0 +1,55 @@
+<form action="#" method=post">
+firstname<input type ="text" name"t1"><br>
+lastname<input type ="text" name"t2"><br>
+Email<input type ="text" name"t3"><br>
+passward<input type="passward" name="p1"><br>
+confirmpassward<input type="passward" name="p2"><br>
+Gender:<input type="radio" name="b1" value="M">Male<br>
+       <input type="radio" name="b1" value="F">Female<br>
+Skills<input type="checkbox" name="c1" value="Java">Java
+      <input type="checkbox" name="c2" value="Paythan">Paythan
+      <input type="checkbox" name="c3" value="C">C
+      <input type="checkbox" name="c4" value="C++">C++<br>
+DOB<select name="dd">
+     <?php
+     for($i=1;$i<=31;$i++)
+     {     
+           echo "<option value='$1'>";
+           echo $i;
+           echo "</option>;
+       }
+       ?>
+    </select>
+
+ <select name="mm"
+     <?php
+     for($i=1;$i<=12;$i++)
+     {     
+           echo "<option value='$1'>";
+           echo $i;
+           echo "</option>;
+       }
+       ?>
+    </select>
+   <select name="yy"
+     <?php
+     for($i=1996;$i<=2020;$i++)
+     {     
+           echo "<option value='$1'>";
+           echo $i;
+           echo "</option>;
+       }
+       ?>
+    </select>
+ </form>
+
+       <?php
+      $d=$_POST['dd'];
+      $m=$_POST['mm'];
+      $y=$_POST['yy'];
+      $dob=$d."/".$m."/".$y;
+      if(isset($_POST['s']))
+      {
+        echo $dob;
+      }
+      ?>
